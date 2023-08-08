@@ -1,15 +1,34 @@
-# Flashcards BoilerPlate
+# About
 
-To install just run `npm install`, the package is up to date with react router dom v6 and the files correctly adapted up to October 2022.
+This is my project for Codecademy's **Redux Flashcards** in the **Full Stack Engineer** path. **Note:** The initial commit includes default files provided by Codecademy (www.codecademy.com). The updated starter code with React Router v6 up to October 2022 was created by [joacopaz](https://github.com/joacopaz/Flashcards_Boilerplate). I have built upon this starting point to develop the project further.
 
-Start the local server with `npm start`
+# Project Description
 
-To get the current updated version of all packages up to the date you will be using this project run the command below
+In this project, you will practice using Redux and Redux Toolkit to manage the complex state of a flashcard-style quiz app. Users will be able to create their own topics, quizzes for those topics, and flashcards for those quizzes. Users will also be able to interact with their quizzes by flipping flashcards over.
 
-```
-npm i -g npm-check-updates
-ncu -u
-npm install
-```
+# To Run
 
-If there is any issues with dependencies run `npm install --force` Don't worry too much about vulnerabilities, npm is buggy that way and also this is a sample project and you won't be using it for more than a portfolio showing.
+Run `npm start` in the project root and the app will be available on port 3000.
+
+# State
+
+The app's state is totally normalized, with slices for topics, quizzes, and cards.
+
+# Routes
+
+- `/new-topic` – form to create a new topic
+- `/topics` – index of all topics
+- `/topics/:topicId` – page for an individual topic
+- `/new-quiz` – form to create a new quiz
+- `/quizzes` – index of all quizzes
+- `/quizzes/:quizId` – page for an individual quiz
+
+# To Test
+
+1. Create topics
+2. Create quizzes
+3. Visit the page for an individual quiz and flip the cards over
+
+# Questions
+
+Is this appropriately scoped? Does it have too many features? Too few?
