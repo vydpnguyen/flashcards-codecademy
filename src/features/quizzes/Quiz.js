@@ -3,7 +3,6 @@ import Card from "../cards/Card";
 import ROUTES from "../../app/routes";
 import { selectQuizzes } from "./quizzesSlice";
 import { useSelector } from "react-redux";
-import { selectCards } from "../cards/cardsSlice";
 
 export default function Topic() {
   // Replace this with a call to your selector to get all the quizzes in state

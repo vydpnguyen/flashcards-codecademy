@@ -9,7 +9,11 @@ export const cardsSlice = createSlice({
         addCard: (state, action) => {
             // Example payload: { id: '123', front: 'front of card', back: 'back of card'}.
             const { id, front, back } = action.payload;
-            state.cards[id] = action.payload;
+            state.cards[id] = {
+                id: id,
+                front: front,
+                back: back
+            };
         }
     }
 });
