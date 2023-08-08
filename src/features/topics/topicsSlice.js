@@ -16,6 +16,12 @@ export const topicsSlice = createSlice({
                 icon: icon,
                 quizIds: []
             }
+        },
+        addQuizId: (state, action) => {
+            // Example payload: {quizId: '123', topicId: '456'}
+            const { quizId, topicId } = action.payload;
+            // Adding a quiz's 'id' to the 'quizId' array of the topic the new quiz is associated with
+            state.topics[topicId].quizIds.push(quizId);
         }
     }
 })
@@ -24,7 +30,7 @@ export const topicsSlice = createSlice({
 export const selectTopics = state => state.topics.topics;
 
 // Export action creators
-export const { addTopic } = topicsSlice.actions;
+export const { addTopic, addQuizId } = topicsSlice.actions;
 
 // Export reducers
 export default topicsSlice.reducer;
