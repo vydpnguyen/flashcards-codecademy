@@ -9,7 +9,6 @@ export const topicsSlice = createSlice({
         addTopic: (state, action) => {
             // Example payload: {id: '123456', name: 'name of topic', icon: 'icon url'}
             const { id, name, icon } = action.payload;
-
             // Store these values in the state as a new topic object
             state.topics[id] = {
                 id: id,
