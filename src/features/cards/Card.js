@@ -9,6 +9,9 @@ export default function Card({ id }) {
   const card = cards[id];
   const [flipped, setFlipped] = useState(false);
 
+  console.log("Card ID:", id);
+  console.log("Card Data:", card);
+
   return (
     <li>
       <button className="card" onClick={(e) => setFlipped(!flipped)}>
