@@ -9,10 +9,15 @@ export const quizzesSlice = createSlice({
     reducers: {
         addQuiz: (state, action) => {
             // Example payload: { id: '123', name: 'quiz name', topicId: '456', cardIds: ['1', '2', '3', ...]}
-            const { id } = action.payload;
+            const { id, name, topicId, cardIds } = action.payload;
 
             // Store these values in the state as a new quiz object
-            state.quizzes[id] = action.payload;
+            state.quizzes[id] = {
+                id: id,
+                name: name,
+                topicId: topicId,
+                cardIds: cardIds
+            };
         }
     }
 })
@@ -26,7 +31,7 @@ export const addQuizThunk = (newQuiz) => {
         dispatch(addQuiz(newQuiz));
 
         // Dispatch the associateQuizWithTopic action to associate the quiz with the topic
-        dispatch(addQuizId({ topicId: topicId, quizId: id }));
+        dispatch(addQuizId({ topicId: topicId, id: id }));
     }
 }
 
