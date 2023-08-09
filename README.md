@@ -6,6 +6,12 @@ This is my project for Codecademy's **Redux Flashcards** in the **Full Stack Eng
 
 In this project, you will practice using Redux and Redux Toolkit to manage the complex state of a flashcard-style quiz app. Users will be able to create their own topics, quizzes for those topics, and flashcards for those quizzes. Users will also be able to interact with their quizzes by flipping flashcards over.
 
+![Flashcards Topics Page](/public/flashcards-topics.png)
+
+
+![Flashcards Quiz Page](/public/flashcards-quiz.png)
+
+
 # To Run
 
 Run `npm start` in the project root and the app will be available on port 3000.
